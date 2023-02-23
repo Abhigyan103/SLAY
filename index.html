@@ -8,7 +8,7 @@
 </head>
 <script>
     const handleOpen = (e) =>{
-        const elem = document.getElementById('crypt');
+        const elem = document.getElementById(e);
         elem.style.display = 'block'
     }
 </script>
@@ -19,9 +19,15 @@
 <div>
     <p style="background-color: green;text-align: center;color: white;font-weight: bold;">Cryptography</p>
 <div>
-    <button onclick="handleOpen()" >what if I rotate it 13 times ?</button>
+    <button onclick="handleOpen('crypt')" >what if I rotate it 13 times ?</button>
     <p id="crypt" style="text-align: center;color: black;font-weight: bold;display: none;">Synt{bbcf}</p>
+
 </div>
+<div>
+    <button onclick="handleOpen('crypt1')" >2^6</button>
+    <p id="crypt1" style="text-align: center;color: black;font-weight: bold;display: none;">UGFua2FqaXNoZWNrZXI=</p>
+    
+</div>  
 
 </body>
 </html>
