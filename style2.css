@@ -1,0 +1,17 @@
+@import url('https://unpkg.com/css.gg@2.0.0/icons/css/chevron-double-right-r.css');
+
+body{
+    width: 100%;
+    height: 100vh;
+    background-color: rgba(19, 111, 139, 0.8);
+}
+
+.ques{
+    text-align: center;
+    margin: auto;
+    margin-top: 50px;
+    height: 30px;
+    width: 300px;
+    background-color: rgba(0, 143, 83, 0.582);
+    border-radius: 5px;
+}
