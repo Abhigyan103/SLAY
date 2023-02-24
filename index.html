@@ -6,28 +6,27 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>beginner friendly CTF</title>
 </head>
-<script>
-    const handleOpen = (e) =>{
-        const elem = document.getElementById(e);
-        elem.style.display = 'block'
-    }
-</script>
 <body>
+    <!--Stylesheet include-->
     <link rel="stylesheet" href="style.css">
+    <!--main Heading-->
     <h1> H4ck3r5 4553mb13</h1>
-    
-<div>
-    <p style="background-color: green;text-align: center;color: white;font-weight: bold;">Cryptography</p>
-<div>
-    <button onclick="handleOpen('crypt')" >what if I rotate it 13 times ?</button>
-    <p id="crypt" style="text-align: center;color: black;font-weight: bold;display: none;">Synt{bbcf}</p>
-
-</div>
-<div>
-    <button onclick="handleOpen('crypt1')" >2^6</button>
-    <p id="crypt1" style="text-align: center;color: black;font-weight: bold;display: none;">UGFua2FqaXNoZWNrZXI=</p>
-    
-</div>  
+    <!--Para 1-->
+    <div>
+        <p style="background-color: green;text-align: center;color: white;font-weight: bold;">Jeopardy</p>
+    <div>
+    <!--Buttons for different section-->
+    <button class="btn1" type="submit" id="Crypto">
+        Cryptography
+    </button>
+    </div>
+    <!--function to redirect on button click-->
+    <script>
+        document.getElementById("Crypto").addEventListener("click",redirectFunction);
+        function redirectFunction(){
+            window.location.href = "/crypt.html"
+        }
+    </script>
 
 </body>
 </html>
