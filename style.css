@@ -1,9 +1,13 @@
-button{
+.btn1{
     background-color:grey;
     color:black;
     text-align: center;
     padding: 2ex 24ex;
     border-radius: 30px;
+}
+.btn {
+    display: flex;
+    justify-content: right;
 }
 h1{
     text-align: center;
