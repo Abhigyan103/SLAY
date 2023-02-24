@@ -1,14 +1,44 @@
-.btn1{
-    background-color:grey;
-    color:black;
-    text-align: center;
-    padding: 2ex 24ex;
-    border-radius: 30px;
+body{
+    width: 100%;
+    background-color: darkkhaki;
 }
-.btn {
-    display: flex;
-    justify-content: right;
-}
+
 h1{
     text-align: center;
+    color: rgb(27, 17, 17);
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
 }
+
+.ques{
+    
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    margin-top: 20px;
+    margin-left: 45%;
+    width: 200px;
+    height: 50px;
+    background-color: rgb(127, 167, 63);
+    border-radius: 4px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.3);
+    text-decoration: none;
+}
+
+.category{
+    text-decoration: none;
+    color: rgba(0,0,0,0.6);
+    text-shadow: 0 4px 8px rgba(0,0,0,0.3);
+
+}
+ .ques:hover{
+    
+    background-color: saddlebrown;
+    transition: .5s;
+ }
+
+ .category:hover{
+    color:rgb(191, 208, 223);
+    transition: .5s;
+ }
