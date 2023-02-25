@@ -9,10 +9,27 @@
 </head>
 <body style="background-image: url('stego001.jpg');">
     <h1 style="border:yellow; border-width:5px; border-style:solid;background-color:yellow; margin:auto">Steganography</h1>
+    <script>
+        const a = (id)=>{
+            return document.getElementById(id);
+        }
+        var show = function(id){
+            a(id).style.display = 'block';
+        }
+        var hide = function(id){
+            a(id).style.display = 'none';
+        }
+    </script>
     <div>
-        <button class="btn1" id="stego1">
+        <button class="btn1" onclick="show('steg1')" id="steg01" href="#" >
             <h2>Simple Nah!</h2>
         </button>
+    </div>
+    <div class="popup" id="steg1">
+        Note it down !!<br>
+        Image viewer is not the only option to open a image<br>
+        <a href="https://drive.google.com/file/d/1UOODIA_QMRBw30MAdR_GsIkwE_YMeHEN/view?usp=sharing">Image</a><br>
+        <button class="btn" id="close1" onclick="hide('steg1')" href="#">Close</button>
     </div>
     <div>
         <button class="btn1" id="stego2">
