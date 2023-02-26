@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <title>Simple Login Form Example</title>
+  <link rel='stylesheet' href='https://fonts.googleapis.com/css?family=Rubik:400,700'>
+  <link rel="stylesheet" href="./style.css">
+  
+</head>
+
+
+<body>
+  <!-- partial:index.partial.html -->
+  <div class="login-form">
+    <form method="POST" id="form">
+      <h1>Login</h1>
+      <div class="content">
+        <div class="input-field">
+          <input name="email" id="email" type="email" placeholder="Email" autocomplete="nope">
+        </div>
+        <div class="input-field">
+          <input name="password" type="password" placeholder="Password" autocomplete="new-password">
+        </div>
+        <a href="#" class="link">Forgot Your Password?</a>
+      </div>
+      <div class="action">
+        <button type="submit" id= "register">Register</button>
+        <button type="submit" id="sign-in">Sign in</button>
+      </div>
+    </form>
+  </div>
+  <!-- partial -->
+
+
+</body>
+<script>
+  let form = document.getElementById('form');
+  let RegisterButton = document.getElementById('register')
+  let signInButton = document.getElementById('sign-in')
+  
+  RegisterButton.addEventListener('click', (e) => {
+    let email = document.getElementsByName('email')[0]
+    let pass = document.getElementsByName('password')[0]
+    if(!email.validationMessage &&  !pass.validationMessage && pass.value) {
+      sendregister(email.value,pass.value)
+    }else {
+      alert('Invalid Email or Password')
+    }
+  })
+  async function sendregister(e,p) {
+    const resp = await fetch('http://localhost:8080/signup',{
+      method: "POST",
+      headers: {
+        "Accept": "application/json",
+      },
+      body: JSON.stringify({"email":e,"password": p})
+    })
+    const respJSON = await resp.json()
+    
+
+  }
+  signInButton.addEventListener('click', (e) => {
+    console.log(e.target)
+  })
+    form.addEventListener('submit', (e) => {
+    e.preventDefault();
+    return false;
+  });
+
+</script>
+</html>
